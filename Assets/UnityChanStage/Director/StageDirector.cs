@@ -11,18 +11,13 @@ public class StageDirector : MonoBehaviour
 
     // Camera points.
     public Transform[] cameraPoints;
-
-    // Exposed to animator.
     public float overlayIntensity = 1.0f;
-
-    // Objects to be controlled.
     public GameObject cameraRig;
     CameraSwitcher mainCameraSwitcher;
     // ScreenOverlay[] screenOverlays;
 
     void Awake()
     {
-        // Instantiate the prefabs.
         mainCameraSwitcher = cameraRig.GetComponentInChildren<CameraSwitcher>();
         // screenOverlays = cameraRig.GetComponentsInChildren<ScreenOverlay>();
 
