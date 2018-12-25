@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NextId: 0
   m_Tracks:
-  - {fileID: 114832953558009032}
-  - {fileID: 114683380452360590}
   - {fileID: 114285778987762292}
   - {fileID: 114716744534844736}
   m_FixedDuration: 0
@@ -359,7 +357,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1544527758, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: Light_effects
+  m_Name: effects
   m_EditorClassIdentifier: 
   m_Locked: 0
   m_Muted: 0
@@ -367,6 +365,7 @@ MonoBehaviour:
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
   m_Children:
+  - {fileID: 114683380452360590}
   - {fileID: 114228749002525594}
   - {fileID: 114584900641172702}
   - {fileID: 114277473591172992}
@@ -821,7 +820,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 114285778987762292}
   m_Children: []
   m_Clips:
   - m_Start: 2.5
@@ -1008,26 +1007,6 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Unite In The Sky (full)
     m_Version: 1
-  m_Version: 2
---- !u!114 &114832953558009032
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2113462093, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: Audio Track
-  m_EditorClassIdentifier: 
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_AnimClip: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips: []
   m_Version: 2
 --- !u!114 &114890778677870600
 MonoBehaviour:
