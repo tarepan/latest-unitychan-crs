@@ -7,11 +7,8 @@ public class StageDirector : MonoBehaviour
     public bool ignoreFastForward = true;
 
     // Prefabs.
-    public GameObject musicPlayerPrefab;
-    public GameObject mainCameraRigPrefab;
     public GameObject[] prefabsNeedsActivation;
     public GameObject[] prefabsOnTimeline;
-    public GameObject[] miscPrefabs;
 
     // Camera points.
     public Transform[] cameraPoints;
@@ -20,7 +17,8 @@ public class StageDirector : MonoBehaviour
     public float overlayIntensity = 1.0f;
 
     // Objects to be controlled.
-    GameObject musicPlayer;
+    public GameObject musicPlayer;
+    public GameObject cameraRig;
     CameraSwitcher mainCameraSwitcher;
     // ScreenOverlay[] screenOverlays;
     GameObject[] objectsNeedsActivation;
@@ -29,9 +27,6 @@ public class StageDirector : MonoBehaviour
     void Awake()
     {
         // Instantiate the prefabs.
-        musicPlayer = (GameObject)Instantiate(musicPlayerPrefab);
-
-        var cameraRig = (GameObject)Instantiate(mainCameraRigPrefab);
         mainCameraSwitcher = cameraRig.GetComponentInChildren<CameraSwitcher>();
         // screenOverlays = cameraRig.GetComponentsInChildren<ScreenOverlay>();
 
@@ -42,8 +37,6 @@ public class StageDirector : MonoBehaviour
         objectsOnTimeline = new GameObject[prefabsOnTimeline.Length];
         for (var i = 0; i < prefabsOnTimeline.Length; i++)
             objectsOnTimeline[i] = (GameObject)Instantiate(prefabsOnTimeline[i]);
-
-        foreach (var p in miscPrefabs) Instantiate(p);
     }
 
     void Update()
