@@ -16,7 +16,6 @@ public class StageDirector : MonoBehaviour
     public float overlayIntensity = 1.0f;
 
     // Objects to be controlled.
-    public GameObject musicPlayer;
     public GameObject cameraRig;
     CameraSwitcher mainCameraSwitcher;
     // ScreenOverlay[] screenOverlays;
@@ -36,12 +35,6 @@ public class StageDirector : MonoBehaviour
         //     so.intensity = overlayIntensity;
         //     so.enabled = overlayIntensity > 0.01f;
         // }
-    }
-
-    public void StartMusic()
-    {
-        foreach (var source in musicPlayer.GetComponentsInChildren<AudioSource>())
-            source.Play();
     }
 
     public void SwitchCamera(int index)
