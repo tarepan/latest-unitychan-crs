@@ -22,7 +22,7 @@ public class StageDirector : MonoBehaviour
     // Objects to be controlled.
     GameObject musicPlayer;
     CameraSwitcher mainCameraSwitcher;
-    ScreenOverlay[] screenOverlays;
+    // ScreenOverlay[] screenOverlays;
     GameObject[] objectsNeedsActivation;
     GameObject[] objectsOnTimeline;
 
@@ -33,7 +33,7 @@ public class StageDirector : MonoBehaviour
 
         var cameraRig = (GameObject)Instantiate(mainCameraRigPrefab);
         mainCameraSwitcher = cameraRig.GetComponentInChildren<CameraSwitcher>();
-        screenOverlays = cameraRig.GetComponentsInChildren<ScreenOverlay>();
+        // screenOverlays = cameraRig.GetComponentsInChildren<ScreenOverlay>();
 
         objectsNeedsActivation = new GameObject[prefabsNeedsActivation.Length];
         for (var i = 0; i < prefabsNeedsActivation.Length; i++)
@@ -48,11 +48,11 @@ public class StageDirector : MonoBehaviour
 
     void Update()
     {
-        foreach (var so in screenOverlays)
-        {
-            so.intensity = overlayIntensity;
-            so.enabled = overlayIntensity > 0.01f;
-        }
+        // foreach (var so in screenOverlays)
+        // {
+        //     so.intensity = overlayIntensity;
+        //     so.enabled = overlayIntensity > 0.01f;
+        // }
     }
 
     public void StartMusic()

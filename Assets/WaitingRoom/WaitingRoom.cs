@@ -7,7 +7,7 @@ public class WaitingRoom : MonoBehaviour
     public GameObject characterPrefab;
     public float fadeTime = 0.5f;
 
-    ScreenOverlay[] screenOverlays;
+    // ScreenOverlay[] screenOverlays;
     float overlayIntensity = 1.0f;
 
     Animator animator;
@@ -17,7 +17,7 @@ public class WaitingRoom : MonoBehaviour
     {
         // Instantiate the camera.
         var go = (GameObject)Instantiate(cameraPrefab);
-        screenOverlays = go.GetComponentsInChildren<ScreenOverlay>();
+        // screenOverlays = go.GetComponentsInChildren<ScreenOverlay>();
 
         // Instantiate the character.
         go = (GameObject)Instantiate(characterPrefab);
@@ -55,10 +55,10 @@ public class WaitingRoom : MonoBehaviour
             overlayIntensity = Mathf.Max(0.0f, overlayIntensity - Time.deltaTime / fadeTime);
         }
 
-        foreach (var so in screenOverlays)
-        {
-            so.intensity = overlayIntensity;
-            so.enabled = overlayIntensity > 0.01f;
-        }
+        // foreach (var so in screenOverlays)
+        // {
+        //     so.intensity = overlayIntensity;
+        //     so.enabled = overlayIntensity > 0.01f;
+        // }
     }
 }
