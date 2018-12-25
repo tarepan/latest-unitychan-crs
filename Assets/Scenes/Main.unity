@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: f468251a01e8242df8066e377619a712, type: 3}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f468251a01e8242df8066e377619a712, type: 3}
 --- !u!1 &689268702
@@ -515,6 +519,7 @@ PrefabInstance:
     - {fileID: 11400010, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
     - {fileID: 11400000, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
     - {fileID: 11400002, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
+    - {fileID: 9200000, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
 --- !u!1 &1249116816 stripped
 GameObject:
