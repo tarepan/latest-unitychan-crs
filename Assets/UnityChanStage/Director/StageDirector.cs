@@ -7,24 +7,17 @@ public class StageDirector : MonoBehaviour
     public bool ignoreFastForward = true;
 
     // Prefabs.
-    public GameObject[] objectsNeedsActivation;
     public GameObject[] objectsOnTimeline;
 
     // Camera points.
     public Transform[] cameraPoints;
-
-    // Exposed to animator.
     public float overlayIntensity = 1.0f;
-
-    // Objects to be controlled.
-    public GameObject musicPlayer;
     public GameObject cameraRig;
     CameraSwitcher mainCameraSwitcher;
     // ScreenOverlay[] screenOverlays;
 
     void Awake()
     {
-        // Instantiate the prefabs.
         mainCameraSwitcher = cameraRig.GetComponentInChildren<CameraSwitcher>();
         // screenOverlays = cameraRig.GetComponentsInChildren<ScreenOverlay>();
 
@@ -37,17 +30,6 @@ public class StageDirector : MonoBehaviour
         //     so.intensity = overlayIntensity;
         //     so.enabled = overlayIntensity > 0.01f;
         // }
-    }
-
-    public void StartMusic()
-    {
-        foreach (var source in musicPlayer.GetComponentsInChildren<AudioSource>())
-            source.Play();
-    }
-
-    public void ActivateProps()
-    {
-        foreach (var o in objectsNeedsActivation) o.BroadcastMessage("ActivateProps");
     }
 
     public void SwitchCamera(int index)

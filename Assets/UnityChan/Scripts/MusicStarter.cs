@@ -23,6 +23,7 @@ namespace UnityChan
 		public void OnCallMusicPlay(string str){
 			// 文字列playを指定で再生開始
 			if(str == "play")
+				Debug.Log("play interupted");
                 if (refAudioSource) refAudioSource.Play();
 			// 文字列stopを指定で再生停止
 			else if (str == "stop")
