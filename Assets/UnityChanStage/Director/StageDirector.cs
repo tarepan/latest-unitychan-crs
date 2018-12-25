@@ -7,8 +7,8 @@ public class StageDirector : MonoBehaviour
     public bool ignoreFastForward = true;
 
     // Prefabs.
-    public GameObject[] prefabsNeedsActivation;
-    public GameObject[] prefabsOnTimeline;
+    public GameObject[] objectsNeedsActivation;
+    public GameObject[] objectsOnTimeline;
 
     // Camera points.
     public Transform[] cameraPoints;
@@ -21,8 +21,6 @@ public class StageDirector : MonoBehaviour
     public GameObject cameraRig;
     CameraSwitcher mainCameraSwitcher;
     // ScreenOverlay[] screenOverlays;
-    GameObject[] objectsNeedsActivation;
-    GameObject[] objectsOnTimeline;
 
     void Awake()
     {
@@ -30,13 +28,6 @@ public class StageDirector : MonoBehaviour
         mainCameraSwitcher = cameraRig.GetComponentInChildren<CameraSwitcher>();
         // screenOverlays = cameraRig.GetComponentsInChildren<ScreenOverlay>();
 
-        objectsNeedsActivation = new GameObject[prefabsNeedsActivation.Length];
-        for (var i = 0; i < prefabsNeedsActivation.Length; i++)
-            objectsNeedsActivation[i] = (GameObject)Instantiate(prefabsNeedsActivation[i]);
-
-        objectsOnTimeline = new GameObject[prefabsOnTimeline.Length];
-        for (var i = 0; i < prefabsOnTimeline.Length; i++)
-            objectsOnTimeline[i] = (GameObject)Instantiate(prefabsOnTimeline[i]);
     }
 
     void Update()
