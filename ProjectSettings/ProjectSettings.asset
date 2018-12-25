@@ -47,7 +47,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 540
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 1
+  m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
@@ -521,6 +521,7 @@ PlayerSettings:
     iOS: 2
   scriptingBackend:
     Metro: 2
+    Standalone: 0
     WP8: 2
     WebGL: 1
     iOS: 0
