@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: f468251a01e8242df8066e377619a712, type: 3}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f468251a01e8242df8066e377619a712, type: 3}
 --- !u!1 &689268702
@@ -515,6 +519,7 @@ PrefabInstance:
     - {fileID: 11400010, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
     - {fileID: 11400000, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
     - {fileID: 11400002, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
+    - {fileID: 9200000, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f58e0fe394b24ed58b332f76fa9c423, type: 3}
 --- !u!1 &1249116816 stripped
 GameObject:
@@ -670,7 +675,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.00008070381
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11400006, guid: 44374dd563c03d64aaff55a08495dd9f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 44374dd563c03d64aaff55a08495dd9f, type: 3}
+    - {fileID: 11400008, guid: 44374dd563c03d64aaff55a08495dd9f, type: 3}
+    - {fileID: 11400006, guid: 44374dd563c03d64aaff55a08495dd9f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44374dd563c03d64aaff55a08495dd9f, type: 3}
 --- !u!1 &1601611652 stripped
 GameObject:
@@ -706,6 +718,22 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
       propertyPath: m_Name
       value: Musics
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200004, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200006, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200006, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
+      propertyPath: Priority
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -763,29 +791,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: UniteInTheSky
       objectReference: {fileID: 0}
-    - target: {fileID: 8200000, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8200002, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200004, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400012, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
       propertyPath: showAudioOptions
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200006, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200006, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
-      propertyPath: Priority
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8200008, guid: 2b9a716c1d31d45a5b906738bd5ee33e, type: 3}
       propertyPath: m_Enabled

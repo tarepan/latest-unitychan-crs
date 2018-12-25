@@ -16,3 +16,7 @@
 sysinfo.txt
 
 .DS_Store
+
+#
+/Build
+/Builds
