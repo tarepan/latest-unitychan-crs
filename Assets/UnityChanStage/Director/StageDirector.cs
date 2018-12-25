@@ -7,7 +7,6 @@ public class StageDirector : MonoBehaviour
     public bool ignoreFastForward = true;
 
     // Prefabs.
-    public GameObject[] objectsNeedsActivation;
     public GameObject[] objectsOnTimeline;
 
     // Camera points.
@@ -43,11 +42,6 @@ public class StageDirector : MonoBehaviour
     {
         foreach (var source in musicPlayer.GetComponentsInChildren<AudioSource>())
             source.Play();
-    }
-
-    public void ActivateProps()
-    {
-        foreach (var o in objectsNeedsActivation) o.BroadcastMessage("ActivateProps");
     }
 
     public void SwitchCamera(int index)
