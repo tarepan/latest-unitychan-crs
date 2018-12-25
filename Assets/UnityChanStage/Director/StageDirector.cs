@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class StageDirector : MonoBehaviour
 {
@@ -15,12 +16,10 @@ public class StageDirector : MonoBehaviour
     public GameObject cameraRig;
     CameraSwitcher mainCameraSwitcher;
     // ScreenOverlay[] screenOverlays;
-
     void Awake()
     {
         mainCameraSwitcher = cameraRig.GetComponentInChildren<CameraSwitcher>();
         // screenOverlays = cameraRig.GetComponentsInChildren<ScreenOverlay>();
-
     }
 
     void Update()
@@ -67,14 +66,14 @@ public class StageDirector : MonoBehaviour
         {
             var info = animator.GetCurrentAnimatorStateInfo(layer);
             if (crossfade > 0.0f)
-                animator.CrossFade(info.nameHash, crossfade / info.length, layer, info.normalizedTime + second / info.length);
+                animator.CrossFade(info.fullPathHash, crossfade / info.length, layer, info.normalizedTime + second / info.length);
             else
-                animator.Play(info.nameHash, layer, info.normalizedTime + second / info.length);
+                animator.Play(info.fullPathHash, layer, info.normalizedTime + second / info.length);
         }
     }
 
     public void EndPerformance()
     {
-        Application.LoadLevel(0);
+        SceneManager.LoadScene(0);
     }
 }
