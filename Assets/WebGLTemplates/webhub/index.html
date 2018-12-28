@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script>
+        var gameInstance;
+        function unityInst(){
+            gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%");
+        }
+    </script>
+  </head>
+  
+  <body>
+    <input type="button" value="start Unity" onclick="unityInst()">
+    <div id="gameContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto"></div>
+
+    <div id="dp" style="background-color: aquamarine;width:100px;height:100px">Drop Here!!</div>
+    <script>
+        dp_elem = document.querySelector("#dp")
+        dp_elem.addEventListener("dragenter", evt => evt.preventDefault());
+        dp_elem.addEventListener("dragover",  evt => evt.preventDefault());
+
+        dp_elem.addEventListener("drop", function(evt){
+            console.log("drop listened.");
+            evt.stopPropagation();
+            evt.preventDefault();
+
+            fr = new FileReader();
+            fr.onload = function(event){
+                function _arrayBufferToBase64(buffer) {
+                    const binary = (new Uint8Array(buffer)).reduce((prev, curr) => prev + String.fromCharCode(curr), "");
+                    return window.btoa(binary);
+                }
+                let base64String = _arrayBufferToBase64(event.target.result);
+                console.log(`base64:\n${base64String}`);
+                gameInstance.SendMessage("WebHub", "SendVRM", base64String);
+            }
+            fr.readAsArrayBuffer(evt.dataTransfer.files[0])
+        }, false)
+    </script>
+
+  </body>
+  
+</html>
